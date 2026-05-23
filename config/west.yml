@@ -4,14 +4,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zzuse
-      url-base: https://github.com/zzuse
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: zmk-nice-oled-zz
-      remote: zzuse
-      revision: v0.3
   self:
     path: config
