@@ -40,7 +40,7 @@
             // |     |     |     | C-- | C-= |     |   | ESC | END | PGU | PGD | HOM |FIND |
             //             |     |     |     |         |     |     |     |
             bindings = <
-                &bt BT_CLR &none  &none  &none  &none  &none          &none        &kp C_VOL_DN &kp C_VOL_UP &kp LBRC  &kp RBRC  &kp DEL
+                &none      &none  &none  &none  &none  &bt BT_CLR     &none        &kp C_VOL_DN &kp C_VOL_UP &kp LBRC  &kp RBRC  &kp DEL
                 &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT &none     &none
                 &rgb_ug RGB_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_EFF   &none  &kp PG_DN  &kp PG_UP  &none  &none  &none
                                    &trans     &none       &trans                      &trans       &trans       &kp LGUI
