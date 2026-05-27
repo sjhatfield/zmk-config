@@ -1,12 +1,17 @@
 manifest:
-  defaults:
-    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
+    # nice_oled — vertical OLED widget rendering for 128x32 screens
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
   self:
     path: config
