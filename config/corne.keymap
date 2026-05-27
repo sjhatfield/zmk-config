@@ -9,7 +9,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/reset.h>
 
 &led_strip {
     chain-length = <27>;
@@ -24,11 +29,7 @@
         compatible = "zmk,keymap";
 
         base_layer {
-            // -----------------------------------------------------------------
-            // | ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | DEL |
-            // | GUI |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
-            // | SHF |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | CTL |
-            //             | CTL | LT1 ENT | LT2 SPC |   | LT2 BSPC | LT1 TAB | SHF |
+            display-name = "BAS";
             bindings = <
                 &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U  &kp I      &kp O    &kp P     &kp DEL
                 &kp LALT  &kp A  &kp S  &kp D  &kp F  &kp G        &kp H  &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
@@ -38,11 +39,7 @@
         };
 
         nav_layer {
-            // -----------------------------------------------------------------
-            // | ESC |     | C-W |     | C-R | C-T |   | DEL | UNDO| CUT | CPY | PST | APP |
-            // |     | GUI | ALT | CTL | SHF |     |   | INS | CAP |  →  |  ↑  |  ↓  |  ←  |
-            // |     |     |     | C-- | C-= |     |   | ESC | END | PGU | PGD | HOM |FIND |
-            //             |     |     |     |         |     |     |     |
+            display-name = "NAV";
             bindings = <
                 &none      &none  &none  &none  &none  &bt BT_CLR     &none        &kp C_VOL_DN &kp C_VOL_UP &kp LBRC  &kp RBRC  &kp DEL
                 &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT &none     &none
@@ -52,17 +49,25 @@
         };
 
         num_layer {
-            // -----------------------------------------------------------------
-            // |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL |
-            // |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-            // |     |     |     |     |  =  |  -  |   |     |     |     |     |     |     |
-            //             |     |     |     |         |     |     |     |
+            display-name = "NUM";
             bindings = <
                 &kp GRAVE  &kp EXCL   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK &kp LPAR   &kp RPAR  &kp DEL
                 &trans     &kp N1     &kp N2    &kp N3    &kp N4     &kp N5         &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &none
                 &trans     &none      &none     &none     &kp EQUAL  &kp MINUS      &none     &none     &none     &none      &kp BSLH  &trans
                                       &trans    &trans     &trans                    &trans    &none     &kp LGUI
             >;
+        };
+
+        extra_1 {
+            status = "reserved";
+        };
+
+        extra_2 {
+            status = "reserved";
+        };
+
+        extra_3 {
+            status = "reserved";
         };
     };
 };
