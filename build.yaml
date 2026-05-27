@@ -10,6 +10,3 @@ include:
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne\"
     artifact-name: corne_right_oled_rgb
     snippet: rgb-config
-  - board: nice_nano/nrf52840/zmk
-    shield: settings_reset
-    artifact-name: settings_reset
